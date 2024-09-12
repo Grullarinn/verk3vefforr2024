@@ -1,0 +1,272 @@
+/* Setjum inn „reset“ sem fjarlægir margin og padding af öllu */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Reiknum stærð á öllum boxum sem border-box */
+html {
+  box-sizing: border-box;
+}
+
+/* og látum erfast á allt */
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/* hjálpar class sem felur sjónrænt en skjálesarar lesa */
+.sr-only:not(:focus):not(:active) {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+/* Almennt */
+
+/** Letur og stærðir **/
+
+/*** Grunnstærð er 16px ***/
+html {
+  font-size: 16px;
+}
+
+.matTest {
+  font-family: 'Matemasie';
+}
+
+/*** Leturgerðir sem við sækjum úr fonts/ möppu ***/
+@font-face {
+  /* TODO Bæta við leturgerð */
+  font-family: 'Matemasie';
+  src: url("fonts/Matemasie/Matemasie-Regular.ttf") format('truetype');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+@font-face {
+  /* TODO Bæta við leturgerð */
+  font-family: 'Open-Sans';
+  src: url("fonts/Open_Sans/static/OpenSans-Regular.ttf") format('truetype');
+  font-weight: normal;
+  font-style: normal;
+
+
+
+}
+
+@font-face {
+  /* TODO Bæta við leturgerð */
+  font-family: 'Open-Sans_Bold';
+  src: url("fonts/Open_Sans/static/OpenSans-Bold.ttf") format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*** Allt meginmál notar open sans ***/
+html,
+input,
+select,
+button {
+  /* TODO Skilgreina */
+  font-family: 'Open-Sans', sans-serif;
+}
+
+/*** Allar fyrirsagnir nota Matemasie regular ***/
+h1,
+h2,
+h3,
+legend {
+  /* TODO Skilgreina */
+  font-family: 'Matemasie', sans-serif;
+}
+
+/** Lætur myndir aldrei taka meira pláss en foreldri skilgreinir **/
+img {
+  max-width: 100%;
+}
+
+/** Litur á hlekkjum erfist frá foreldri **/
+a {
+  color: inherit;
+}
+
+/**
+   * Eftirfarandi setur upp grunn umbrot (layout) síðu með flexbox.
+   * Við förum yfir flexbox í viku 4 en þangað til er hægt að nota þetta
+   * sem grunn og án breytinga.
+   * Athugið að til þess að þetta virki þar að setja <div class="wrapper"> utan um allt efni 
+   * innan <body>.
+   */
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100vh;
+
+  background-color: #f3dd99;
+}
+
+.wrapper main {
+  flex: 1;
+}
+
+/* Það sem fylgir er tillaga að uppbyggingu á selectorum fyrir verkefnið */
+
+/** Haus á síðum **/
+
+header {
+  /* TODO Skilgreina */
+  background-color: #cc99bb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 1rem;
+  box-sizing: border-box;
+
+}
+
+/** Valmynd **/
+
+nav {
+  /* TODO Skilgreina */
+  background-color: #eebbdd;
+  padding: 1rem;
+  border-bottom: solid 4px #cc99bb;
+  /*
+  margin-bottom: 1rem;
+  */
+}
+
+/* TODO Skilgreina aðra selectora fyrir valmynd 
+1. nav ul li a.selected
+*/
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style-type: none;
+}
+
+nav li {
+  padding: 1rem;
+
+}
+
+.selected {
+  text-decoration: none;
+  font-family: 'Open-Sans_bold', sans-serif;
+  
+}
+
+/** Meginmál og efni forsíðu **/
+
+main {
+  /* TODO Skilgreina */
+  text-align: left;
+  padding: 1rem;
+  min-height: 70vh;
+  /*justify-content: left;
+    display: flex;
+      padding-left: 3rem;
+
+        padding-left: 3rem;
+  padding-right: 3rem;
+
+  */
+}
+
+
+main section:first-child {
+  float: left;
+  width: 62%;
+}
+
+main section:last-child {
+  float: right;
+  width: 38%;
+  text-align: left;
+  padding-left: 1rem;
+  padding-bottom: 1rem;
+}
+
+/* TODO Skilgreina aðra selectora fyrir meginmál of forsíðu */
+main section img {
+  border-radius: 5px;
+}
+
+/** Fótur **/
+
+footer {
+  /* TODO Skilgreina */
+  background-color: #eebbdd;
+  border-top: solid 4px #cc99bb;
+  margin-top: 1rem;
+  text-align: center;
+  /*
+  
+  */
+  
+  
+}
+
+/* Ef við notum section fyrir hvert svæði undir fót, þá er hægt að nota eftirfarandi */
+footer>section {
+  display: inline-block;
+  /* Lætur efni byrja efst í línu, almennt myndum við nota flexbox hér! */
+  vertical-align: top;
+  /* TODO fleiri skilgreiningar */
+  padding: 1rem;
+  text-align: center;
+  
+}
+
+/* TODO Skilgreina aðra selectora fyrir fót */
+footer>section h2 {
+  margin-bottom: 1rem;
+  
+  /*
+  padding-left: 1rem;
+  padding-right: 1rem;
+
+  margin-left: 1rem;
+  margin-right: 1rem;
+  */
+}
+
+footer>section b {
+  font-family: 'Open-Sans_bold', sans-serif;
+}
+
+footer>section p {
+  font-family: 'Open-Sans', sans-serif;
+}
+
+
+/** Spilasíða, töflustílar **/
+
+table {
+  /* TODO Skilgreina */
+}
+
+/* TODO Skilgreina aðra selectora fyrir töflu */
+
+/** Viðburðir **/
+
+.event {
+  /* TODO Skilgreina, gerum ráð fyrir að hver viðburður hafi eigin selector */
+}
+
+/* TODO Skilgreina aðra selectora fyrir viðburði */
+
+/** Skráningarform **/
+
+/* TODO Skilgreina */

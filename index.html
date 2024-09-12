@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
 
     <meta property="og:title" content="Spilabúðin">
     <meta property="og:description"
@@ -15,84 +16,69 @@
 </head>
 
 <body>
+    <div class="wrapper">
 
-    <h1>Spilabúðin</h1>
-    <a href="#main-content" class="skip-to-content">Beint í efni</a>
+        <header>
+            <h1>Spilabúðin</h1>
+            <a href="main" class="sr-only">Beint í efni</a>
+        </header>
 
-    <nav>
-        <ul>
-            <li style="color: red;"><a href="index.html">Forsíða Spilabúðarinnar</a></li>
-            <li><a href="sidur/spil.html">Spil</a></li>
-            <li><a href="sidur/vidburdir.html">Viðburðir</a></li>
-            <li><a href="sidur/form.html">Skráning á viðburði</a></li>
-        </ul>
-    </nav>
+        <nav>
+            <ul>
+                <li><a class="selected" href="index.html">Forsíða</a></li>
+                <li><a href="sidur/spil.html">Spil</a></li>
+                <li><a href="sidur/vidburdir.html">Viðburðir</a></li>
+                <li><a href="sidur/form.html">Skráning á viðburði</a></li>
+            </ul>
+        </nav>
 
-    <main id="main-content">
-        <h1>Spilabúðin</h1>
+        <main>
 
-        <p>Spilabúðin selur spil, heldur viðburði og býður upp á skemmtilega stund. Kíktu á okkur á Spilagötu 1.</p>
-        <img src="myndir/spilabudin.jpg" width="700" alt="Mynd af spilabúðinni">
+            <section>
+                <p>Spilabúðin selur spil, heldur viðburði og býður upp á skemmtilega stund. Kíktu á okkur á Spilagötu 1.
+                </p><br>
+                <h3>Spil</h3>
+                <p>Við seljum allskonar spil fyrir allskonar fólk. <a href="sidur/spil.html">Skoðaðu spila úrvalið</a>.
+                </p><br>
+                <h3>Viðburðir</h3>
+                <p>Við höldum reglulega viðburði. <a href="sidur/vidburdir.html">Skoðaðu viðburði</a> eða <a
+                        href="sidur/form.html">skráðu þig á viðburð</a>.</p>
+            </section>
+            <section>
+                <img src="myndir/spilabudin.jpg" width="300" alt="Mynd af spilabúðinni">
+            </section>
+        </main>
 
-        <h2>Spil</h2>
-        <p>Við seljum allskonar spil fyrir allskonar fólk. <a href="sidur/spil.html">Skoðaðu spila úrvalið</a>.</p>
-
-        <h2>Viðburðir</h2>
-        <p>Við höldum reglulega viðburði. <a href="sidur/vidburdir.html">Skoðaðu viðburði</a> eða <a
-                href="sidur/form.html">skráðu þig á viðburð</a>.</p>
-    </main>
-    <footer>
-        <table>
-            <thead>
-                <tr>
-                    <th>Opnunartími</th>
-                    <th>Hér erum við</th>
-                    <th>Samfélagsmiðlar</th>
-                </tr>
-            </thead>
-
-            <tbody>
-                <tr>
-                    <td>
-                        Mánudagar
-                        Lokað
-                    </td>
-                    <td>Spilabúðin ehf</td>
-                    <td><a href="https://www.facebook.com/HaskoliIslands/">Facebook</a></td>
-                </tr>
-                <tr>
-                    <td>
-                        Þriðjudagar til fimmtudags
-                        14:00–22:00
-                    <td>Spilgata 1</td>
-                    <td><a href="https://www.youtube.com/user/HIvarp">YouTube</a></td>
-                </tr>
-                <tr>
-                    <td>
-                        Föstudaga
-                        14:00–00:00
-                    </td>
-                    <td>101 Reykjavík</td>
-                    <td><a href="https://www.instagram.com/haskoli_islands/">Instagram</a></td>
-                </tr>
-                <tr>
-                    <td>
-                        Laugardaga
-                        12:00–00:00
-                    </td>
-                    <td>Sími 123-4567</td>
-                </tr>
-                <tr>
-                    <td>
-                        Sunnudaga
-                        12:00–22:00
-                    </td>
-                    <td>spilabudin@example.org</td>
-                </tr>
-            </tbody>
-
-        </table>
-    </footer>
+        <footer>
+            <section>
+                <h2>Opnunartími</h2>
+                <b>Mánudagar</b>
+                <p>Lokað</p><br>
+                <b>Þriðjudagar til fimmtudags</b>
+                <p>14:00–22:00</p><br>
+                <b>Föstudaga</b>
+                <p>14:00–00:00</p><br>
+                <b>Laugardaga</b>
+                <p>12:00–00:00</p><br>
+                <b>Sunnudaga</b>
+                <p>12:00–22:00</p>
+            </section>
+            <section>
+                <h2>Hér erum við</h2>
+                <p>Spilabúðin ehf</p>
+                <p>Spilgata 1</p>
+                <p>101 Reykjavík</p>
+                <p><u>Sími 123-4567</u></p>
+                <p><u>spilabudin@example.org</u></p>
+            </section>
+            <section>
+                <h2>Samfélagsmiðlar</h2>
+                <p><a href="https://www.facebook.com/HaskoliIslands/">Facebook</a></p>
+                <p><a href="https://www.youtube.com/user/HIvarp">YouTube</a></p>
+                <p><a href="https://www.instagram.com/haskoli_islands/">Instagram</a></p>
+            </section>
+        </footer>
+    </div>
 </body>
 
 </html>
